@@ -149,17 +149,9 @@ const bestuursleden = (await getCollection('bestuur'))
 
       <h3 style="margin-top: 2rem;">Jaarrekeningen</h3>
       <ul class="jaarrekeningen-lijst">
-        {[
-          ['2025', 'https://openspraaktechnologie.org/wp-content/uploads/2026/04/jaarrekening-2025-stg.-open-spraaktechnologie-getekend.pdf'],
-          ['2024', 'https://openspraaktechnologie.org/wp-content/uploads/2025/04/jaarrekening-stg.-open-spraaktechnologie-2024.pdf'],
-          ['2023', 'https://openspraaktechnologie.org/wp-content/uploads/2024/05/stichtingopenspraaktechnologie-jaarrekening2023-publicatie.pdf'],
-          ['2022', 'https://openspraaktechnologie.org/wp-content/uploads/2023/05/stichting-open-spraaktechnologie-concept-jaarrekening-2022-publicatie.pdf'],
-          ['2021', 'https://openspraaktechnologie.org/wp-content/uploads/2022/03/jaarrekening-2021-publicatie.pdf'],
-          ['2020', 'https://openspraaktechnologie.org/wp-content/uploads/2021/03/jaarrekening-2020-publicatie.pdf'],
-          ['2019', 'https://openspraaktechnologie.org/wp-content/uploads/2020/04/jaarrekening-2019-sos.pdf'],
-        ].map(([jaar, url]) => (
+        {['2025','2024','2023','2022','2021','2020','2019'].map((jaar) => (
           <li>
-            <a href={url} target="_blank" rel="noopener">Jaarrekening {jaar}</a>
+            <a href={`${base}jaarrekeningen/jaarrekening-${jaar}.pdf`} target="_blank" rel="noopener">Jaarrekening {jaar}</a>
           </li>
         ))}
       </ul>
