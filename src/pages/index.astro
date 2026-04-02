@@ -95,14 +95,25 @@ const komende = edities
         <h2 class="section-title">Laatste nieuws</h2>
         <ul class="post-list">
           {recentNieuws.map(post => (
-            <li>
-              <p class="post-meta">
-                {post.data.date.toLocaleDateString('nl-NL', { year: 'numeric', month: 'long', day: 'numeric' })}
-              </p>
-              <a href={`${base}nieuws/${post.slug}`} class="post-title">{post.data.title}</a>
-              {post.data.description && (
-                <p class="post-description">{post.data.description}</p>
+            <li class="post-item">
+              {post.data.image && (
+                <a href={`${base}nieuws/${post.slug}`} class="post-thumb-link">
+                  <img
+                    src={`${base}${post.data.image}`}
+                    alt={post.data.title}
+                    class="post-thumb"
+                  />
+                </a>
               )}
+              <div class="post-item-body">
+                <p class="post-meta">
+                  {post.data.date.toLocaleDateString('nl-NL', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </p>
+                <a href={`${base}nieuws/${post.slug}`} class="post-title">{post.data.title}</a>
+                {post.data.description && (
+                  <p class="post-description">{post.data.description}</p>
+                )}
+              </div>
             </li>
           ))}
         </ul>
@@ -154,6 +165,36 @@ const komende = edities
   @media (max-width: 640px) {
     .activiteiten-lijst {
       grid-template-columns: 1fr;
+    }
+  }
+
+  .post-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .post-thumb-link {
+    flex-shrink: 0;
+  }
+
+  .post-thumb {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .post-item-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media (max-width: 480px) {
+    .post-thumb {
+      width: 80px;
+      height: 56px;
     }
   }
 </style>
