@@ -1,12 +1,12 @@
 :root {
-  --color-primary: #005f8e;
-  --color-primary-dark: #004a6f;
-  --color-accent: #0077b6;
-  --color-text: #1a2633;
+  --color-primary: #0d1b3e;
+  --color-primary-dark: #060e20;
+  --color-accent: #e8386d;
+  --color-text: #1a1a2e;
   --color-text-muted: #5a6a7a;
   --color-bg: #ffffff;
-  --color-bg-alt: #f0f4f8;
-  --color-border: #dde3ea;
+  --color-bg-alt: #f7f7fb;
+  --color-border: #e2e2ed;
   --font: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
   --max-width: 880px;
   --header-height: 64px;
@@ -79,6 +79,7 @@ ul, ol {
   display: block;
   height: 3px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+
 }
 
 .header-inner {
