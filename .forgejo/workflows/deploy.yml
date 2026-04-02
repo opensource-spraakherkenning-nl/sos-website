@@ -33,5 +33,5 @@ jobs:
           git add -A
           git commit -m "Deploy: ${{ github.sha }}"
           git push --force \
-            "https://oauth2:${{ secrets.GITHUB_TOKEN }}@codeberg.org/${{ github.repository }}.git" \
+            "https://oauth2:${{ secrets.PAGES_TOKEN }}@codeberg.org/${{ github.repository }}.git" \
             HEAD:pages
