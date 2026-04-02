@@ -123,13 +123,15 @@ const bestuursleden = (await getCollection('bestuur'))
 
     <section class="section" id="anbi">
       <h2>ANBI-gegevens</h2>
-      <table style="border-collapse: collapse; width: 100%; max-width: 560px;">
+      <p>Stichting Open Spraaktechnologie heeft ANBI-status sinds 20 mei 2020.</p>
+      <table style="border-collapse: collapse; width: 100%; max-width: 560px; margin-top: 1rem;">
         <tbody>
           {[
             ['Naam',             'Stichting Open Spraaktechnologie'],
             ['RSIN',             '860031354'],
             ['KvK',              '74801260'],
             ['Opgericht',        '10 mei 2019'],
+            ['ANBI-status',      'Verleend op 20 mei 2020'],
             ['Postadres',        'Zesakkers 2108, 6605 TG Wijchen'],
             ['Bezoekadres',      'Erasmusplein 1, 6525 HT Nijmegen'],
             ['Bank',             'NL28 TRIO 0379 687 216 (Triodos Bank)'],
@@ -144,6 +146,23 @@ const bestuursleden = (await getCollection('bestuur'))
           ))}
         </tbody>
       </table>
+
+      <h3 style="margin-top: 2rem;">Jaarrekeningen</h3>
+      <ul class="jaarrekeningen-lijst">
+        {[
+          ['2025', 'https://openspraaktechnologie.org/wp-content/uploads/2026/04/jaarrekening-2025-stg.-open-spraaktechnologie-getekend.pdf'],
+          ['2024', 'https://openspraaktechnologie.org/wp-content/uploads/2025/04/jaarrekening-stg.-open-spraaktechnologie-2024.pdf'],
+          ['2023', 'https://openspraaktechnologie.org/wp-content/uploads/2024/05/stichtingopenspraaktechnologie-jaarrekening2023-publicatie.pdf'],
+          ['2022', 'https://openspraaktechnologie.org/wp-content/uploads/2023/05/stichting-open-spraaktechnologie-concept-jaarrekening-2022-publicatie.pdf'],
+          ['2021', 'https://openspraaktechnologie.org/wp-content/uploads/2022/03/jaarrekening-2021-publicatie.pdf'],
+          ['2020', 'https://openspraaktechnologie.org/wp-content/uploads/2021/03/jaarrekening-2020-publicatie.pdf'],
+          ['2019', 'https://openspraaktechnologie.org/wp-content/uploads/2020/04/jaarrekening-2019-sos.pdf'],
+        ].map(([jaar, url]) => (
+          <li>
+            <a href={url} target="_blank" rel="noopener">Jaarrekening {jaar}</a>
+          </li>
+        ))}
+      </ul>
     </section>
 
     <section class="section" id="colofon">
@@ -234,6 +253,20 @@ const bestuursleden = (await getCollection('bestuur'))
     font-size: 0.9rem;
     color: var(--color-text-muted);
     margin: 0;
+  }
+
+  .jaarrekeningen-lijst {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .jaarrekeningen-lijst li::before {
+    content: "↓ ";
+    color: var(--color-accent);
   }
 
   @media (max-width: 640px) {
