@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  // Test-URL via Codeberg Pages:
-  site: 'https://roelandordelman.codeberg.page',
+  // Test-URL via GitHub Pages:
+  site: 'https://roelandordelman.github.io',
   base: '/sos-website',
 
   // Zodra het domein is gekoppeld, vervang bovenstaande door:
