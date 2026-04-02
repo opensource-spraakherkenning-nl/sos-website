@@ -9,7 +9,7 @@ const bestuursleden = (await getCollection('bestuur'))
 
 <BaseLayout
   title="Over"
-  description="Over Stichting Open Spraaktechnologie: missie, bestuur en ANBI-gegevens."
+  description="Missie, visie, doelstellingen en activiteiten van Stichting Open Spraaktechnologie."
 >
   <div class="container">
 
@@ -21,17 +21,75 @@ const bestuursleden = (await getCollection('bestuur'))
     <section class="section" id="missie">
       <h2>Missie</h2>
       <p>
-        Stichting Open Spraaktechnologie stelt zich ten doel hoogwaardige Nederlandse
-        spraaktechnologie beschikbaar te maken voor de Nederlandse onderzoeksgemeenschap,
-        non-profitinstellingen en andere geïnteresseerde partijen.
+        Wij stimuleren innovatie en samenwerking rond Nederlandse spraaktechnologie door:
       </p>
-      <p>
-        De stichting beheert open source spraaktechnologie, faciliteert de verdere
-        ontwikkeling ervan en biedt diensten aan voor niet-commercieel gebruik door
-        publieke instellingen zoals archieven, omroepen, overheidsinstanties en
-        universiteiten. Ze is opgericht door taal- en spraaktechnologieonderzoekers
-        van de Universiteit Twente en de Radboud Universiteit Nijmegen.
-      </p>
+      <ul>
+        <li>Het faciliteren van kennisuitwisseling tussen onderzoeksinstellingen, industrie, publieke organisaties en het algemene publiek, en het vergroten van het bewustzijn over ontwikkelingen, uitdagingen en successen in de Nederlandse spraaktechnologie.</li>
+        <li>Het bevorderen van interdisciplinaire samenwerking binnen het spraaktechnologie-ecosysteem in Nederland.</li>
+        <li>Het ondersteunen van verantwoorde ontwikkeling en toepassing van spraaktechnologie ten behoeve van Nederlandssprekende gemeenschappen.</li>
+        <li>Te dienen als een betrouwbare, objectieve bron van informatie over Nederlandse spraaktechnologie in het publieke debat en bij beleidsvorming.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="visie">
+      <h2>Visie</h2>
+      <blockquote>
+        De Stichting Open Spraaktechnologie is katalysator voor innovatie rond Nederlandse
+        spraaktechnologie, en bevordert een levendig, samenwerkend ecosysteem waar kennis
+        vrij stroomt tussen onderzoek, industrie en samenleving.
+      </blockquote>
+    </section>
+
+    <section class="section" id="doelstellingen">
+      <h2>Doelstellingen</h2>
+      <div class="doelen-grid">
+        <div class="doel-card">
+          <h3>Kennisuitwisseling</h3>
+          <p>Stimuleren van kennisoverdracht binnen en tussen gemeenschappen die geïnteresseerd zijn in Nederlandstalige spraaktechnologie — over de stand van zaken in onderzoek en over de wensen en behoeften binnen industrie en instellingen.</p>
+        </div>
+        <div class="doel-card">
+          <h3>Interdisciplinaire samenwerking</h3>
+          <p>Samenbrengen van verschillende communities die interesse hebben in spraaktechnologie om kennisoverdracht te bevorderen.</p>
+        </div>
+        <div class="doel-card">
+          <h3>Verantwoorde ontwikkeling</h3>
+          <p>Stimuleren van informatieontwikkeling over onderwerpen die relevant zijn voor de community:</p>
+          <ul>
+            <li>Kwaliteit Nederlandstalige spraakherkenning (benchmarking)</li>
+            <li>Juridische, ethische en maatschappelijke vraagstukken</li>
+            <li>Gebruik van NL spraaktechnologie</li>
+          </ul>
+        </div>
+        <div class="doel-card">
+          <h3>Betrouwbare informatiebron</h3>
+          <p>De verschillende communities informeren over:</p>
+          <ul>
+            <li>De stand van zaken met betrekking tot Nederlandstalige spraaktechnologie</li>
+            <li>Mogelijkheden voor subsidies gerelateerd aan R&amp;D rond spraaktechnologie</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="activiteiten">
+      <h2>Activiteiten</h2>
+      <p>Onze activiteiten zijn gelinkt aan onze doelstellingen en gericht op verschillende doelgroepen.</p>
+
+      <h3 style="margin-top: 1.5rem;">Huidige activiteiten</h3>
+      <ul>
+        <li>We organiseren jaarlijks een <a href={`${base}edities`}>Dutch Speech Tech Day</a></li>
+        <li>We ondersteunen een jaarlijkse winter- of summerschool rond spraaktechnologie</li>
+        <li>We organiseren site visits bij (onderzoeks)groepen die werken aan spraaktechnologie</li>
+        <li>We houden mogelijkheden voor sponsoring en subsidie in de gaten en zetten calls uit in samenwerking met fondsen</li>
+        <li>We stimuleren benchmarking voor Nederlandstalige spraaktechnologie</li>
+        <li>We informeren doelgroepen over ontwikkelingen via LinkedIn en deze website</li>
+      </ul>
+
+      <h3 style="margin-top: 1.5rem;">Plannen</h3>
+      <ul>
+        <li>Publieksactiviteiten om kennis over (verantwoorde) inzet van spraaktechnologie te verspreiden</li>
+        <li>Bijdragen aan de ontwikkeling van masterclasses en webinars over spraaktechnologie</li>
+      </ul>
     </section>
 
     <section class="section" id="bestuur">
@@ -102,6 +160,49 @@ const bestuursleden = (await getCollection('bestuur'))
 </BaseLayout>
 
 <style>
+  blockquote {
+    border-left: 4px solid var(--color-accent);
+    margin: 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-bg-alt);
+    border-radius: 0 6px 6px 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-primary);
+    line-height: 1.6;
+  }
+
+  .doelen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+
+  .doel-card {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 1.35rem 1.5rem;
+    background: var(--color-bg-alt);
+  }
+
+  .doel-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent);
+  }
+
+  .doel-card p, .doel-card li {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .doel-card ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+  }
+
   .bestuur-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -136,7 +237,7 @@ const bestuursleden = (await getCollection('bestuur'))
   }
 
   @media (max-width: 640px) {
-    .bestuur-grid {
+    .doelen-grid, .bestuur-grid {
       grid-template-columns: 1fr;
     }
   }

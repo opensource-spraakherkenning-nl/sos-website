@@ -27,7 +27,8 @@ const komende = edities
     <section class="hero">
       <h1>Open Spraaktechnologie</h1>
       <p class="tagline">
-        Kennis en samenwerking rondom hoogwaardige, open Nederlandse spraaktechnologie.
+        Katalysator voor innovatie rond Nederlandse spraaktechnologie — waar kennis vrij stroomt
+        tussen onderzoek, industrie en samenleving.
       </p>
       <div class="hero-actions">
         <a href={`${base}edities`} class="btn">Speech Tech Days</a>
@@ -36,25 +37,40 @@ const komende = edities
     </section>
 
     <section class="section">
-      <h2 class="section-title">Doelstellingen</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Kennisuitwisseling</h3>
-          <p>Faciliteren van kennisuitwisseling tussen onderzoeksinstellingen, industrie, overheid en publiek.</p>
+      <h2 class="section-title">Wat we doen</h2>
+      <div class="activiteiten-lijst">
+        <div class="activiteit">
+          <span class="activiteit-icon">🎤</span>
+          <div>
+            <strong>Dutch Speech Tech Day</strong>
+            <p>Jaarlijkse ontmoetingsplaats voor onderzoekers, ontwikkelaars en gebruikers van spraaktechnologie.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Samenwerking</h3>
-          <p>Bevorderen van interdisciplinaire samenwerking binnen het ecosysteem.</p>
+        <div class="activiteit">
+          <span class="activiteit-icon">🤝</span>
+          <div>
+            <strong>Kennisuitwisseling</strong>
+            <p>We verbinden onderzoeksinstellingen, industrie en overheid rondom Nederlandstalige spraaktechnologie.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Verantwoorde ontwikkeling</h3>
-          <p>Ondersteunen van verantwoorde ontwikkeling en toepassing van spraaktechnologie.</p>
+        <div class="activiteit">
+          <span class="activiteit-icon">📊</span>
+          <div>
+            <strong>Benchmarking</strong>
+            <p>We stimuleren objectieve evaluatie van de kwaliteit van Nederlandstalige spraakherkenning.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Informatiebron</h3>
-          <p>Fungeren als betrouwbare, objectieve bron over Nederlandse spraaktechnologie.</p>
+        <div class="activiteit">
+          <span class="activiteit-icon">⚖️</span>
+          <div>
+            <strong>Verantwoorde toepassing</strong>
+            <p>We adresseren juridische, ethische en maatschappelijke vraagstukken rond spraaktechnologie.</p>
+          </div>
         </div>
       </div>
+      <p style="margin-top: 1.75rem;">
+        <a href={`${base}over`}>Lees meer over onze missie en activiteiten →</a>
+      </p>
     </section>
 
     {komende.length > 0 && (
@@ -98,3 +114,46 @@ const komende = edities
 
   </div>
 </BaseLayout>
+
+<style>
+  .activiteiten-lijst {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .activiteit {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-bg-alt);
+  }
+
+  .activiteit-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .activiteit strong {
+    display: block;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .activiteit p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .activiteiten-lijst {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
