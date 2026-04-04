@@ -40,7 +40,13 @@ const projecten = defineCollection({
     website: z.string().url().optional(),
     github: z.string().url().optional(),
     financiering: z.string().optional(),                   // Bijv. "NWO, Horizon Europe"
+    fonds_logo: z.string().optional(),                     // Pad in public/, bijv. "projecten/fondsen/clicknl.png"
     looptijd: z.string().optional(),                       // Bijv. "2023–2026"
+    partners: z.array(z.object({
+      naam: z.string(),
+      website: z.string().url().optional(),
+      logo: z.string().optional(),                         // Pad in public/, bijv. "projecten/partners/radboud.png"
+    })).optional(),
     status: z.enum(['actief', 'afgerond']).default('actief'),
   }),
 });

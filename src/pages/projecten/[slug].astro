@@ -36,7 +36,12 @@ const d = project.data;
 
       <dl class="project-meta">
         {d.looptijd     && <><dt>Looptijd</dt>    <dd>{d.looptijd}</dd></>}
-        {d.financiering && <><dt>Financiering</dt><dd>{d.financiering}</dd></>}
+        {d.financiering && <><dt>Financiering</dt><dd>
+          <span>{d.financiering}</span>
+          {d.fonds_logo && (
+            <img src={`${base}${d.fonds_logo}`} alt={d.financiering} class="fonds-logo" />
+          )}
+        </dd></>}
         {d.contact      && <><dt>Contact</dt>     <dd>{d.contact_email
           ? <a href={`mailto:${d.contact_email}`}>{d.contact}</a>
           : d.contact
@@ -45,6 +50,31 @@ const d = project.data;
         {d.github  && <><dt>GitHub</dt> <dd><a href={d.github}  target="_blank" rel="noopener">{d.github}</a></dd></>}
       </dl>
     </div>
+
+    {d.partners && d.partners.length > 0 && (
+      <section class="partners-sectie">
+        <h2>Partners</h2>
+        <div class="partners-lijst">
+          {d.partners.map(p => (
+            p.website ? (
+              <a href={p.website} target="_blank" rel="noopener" class="partner-item">
+                {p.logo
+                  ? <img src={`${base}${p.logo}`} alt={p.naam} class="partner-logo" />
+                  : <span class="partner-naam">{p.naam}</span>
+                }
+              </a>
+            ) : (
+              <div class="partner-item">
+                {p.logo
+                  ? <img src={`${base}${p.logo}`} alt={p.naam} class="partner-logo" />
+                  : <span class="partner-naam">{p.naam}</span>
+                }
+              </div>
+            )
+          ))}
+        </div>
+      </section>
+    )}
 
     <div class="article-body">
       <Content />
@@ -96,5 +126,62 @@ const d = project.data;
   .tag--muted {
     background: var(--color-bg-alt);
     color: var(--color-text-muted);
+  }
+
+  .fonds-logo {
+    display: block;
+    max-height: 40px;
+    max-width: 160px;
+    object-fit: contain;
+    margin-top: 0.5rem;
+  }
+
+  .partners-sectie {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .partners-sectie h2 {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .partners-lijst {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem 2rem;
+  }
+
+  .partner-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .partner-logo {
+    max-height: 48px;
+    max-width: 140px;
+    object-fit: contain;
+    filter: grayscale(30%);
+    transition: filter 0.15s;
+  }
+
+  .partner-item:hover .partner-logo {
+    filter: grayscale(0%);
+  }
+
+  .partner-naam {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
   }
 </style>

@@ -22,14 +22,27 @@ onderwerp:
 instelling: "Naam van de instelling of organisatie"
 contact: "Voornaam Achternaam"
 contact_email: "naam@instelling.nl"
-logo: "projecten/bestandsnaam.png"   # logo in public/projecten/, laat weg als je geen logo hebt
+logo: "projecten/bestandsnaam.png"        # projectlogo — zet het bestand in public/projecten/
 website: "https://..."
 github: "https://github.com/..."
-financiering: "Bijv. NWO, Horizon Europe, eigen middelen"
 looptijd: "2023–2026"
 
+# FINANCIERING
+financiering: "Bijv. NWO, CLICKNL, Horizon Europe"
+fonds_logo: "projecten/fondsen/clicknl.png"   # logo van het fonds — zet het bestand in public/projecten/fondsen/
+
+# PARTNERS — voeg toe of verwijder naar behoefte
+# logo en website zijn optioneel per partner
+partners:
+  - naam: "Partner Organisatie 1"
+    website: "https://www.partner1.nl"
+    logo: "projecten/partners/partner1.png"   # zet het bestand in public/projecten/partners/
+  - naam: "Partner Organisatie 2"
+    website: "https://www.partner2.nl"
+  - naam: "Partner Organisatie 3"             # zonder website of logo
+
 # STATUS
-# Kies: actief  (project loopt)
+# Kies: actief   (project loopt)
 #        afgerond (project is klaar)
 status: actief
 ---
