@@ -15,18 +15,21 @@ contact_email: "roeland.ordelman@utwente.nl"
 logo: "projecten/HOSAN-logo-transparant-hq.png"   # logo in public/projecten/, laat weg als je geen logo hebt
 # FINANCIERING
 financiering: "CLICKNL"
-fonds_logo: "projecten/fondsen/clicknl.gif"   # logo van het fonds — zet het bestand in public/projecten/fondsen/
+fonds_logo: "projecten/fondsen/logo_clicknl.gif"
 looptijd: "2024–2025"
 
 # PARTNERS — voeg toe of verwijder naar behoefte
 # logo en website zijn optioneel per partner
 partners:
   - naam: "Nationale Politie"
+    logo: "projecten/partners/logo_politie.png"
   - naam: "Nederlands Instituut voor Beeld & Geluid"
   - naam: "NPO"
   - naam: "SURF"
   - naam: "Radboud Universiteit"
   - naam: "Alliantie Digitaal Samenleven"
+  - naam: "Y.Digital"
+  
 
 # STATUS
 # Kies: actief  (project loopt)
