@@ -4,6 +4,7 @@ import { base } from '../lib/base';
 const navItems = [
   { label: 'Over',             href: `${base}over` },
   { label: 'Speech Tech Days', href: `${base}edities` },
+  { label: 'Benchmarking',     href: 'https://opensource-spraakherkenning-nl.github.io/ASR_NL_results/', external: true },
   { label: 'Nieuws',           href: `${base}nieuws` },
 ];
 
@@ -23,7 +24,9 @@ const currentPath = Astro.url.pathname;
             <li>
               <a
                 href={item.href}
-                aria-current={currentPath.startsWith(item.href) ? 'page' : undefined}
+                aria-current={!item.external && currentPath.startsWith(item.href) ? 'page' : undefined}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noopener' : undefined}
               >
                 {item.label}
               </a>
