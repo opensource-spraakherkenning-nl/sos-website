@@ -86,6 +86,15 @@ const afgerond = projecten.filter(p => p.data.status === 'afgerond');
               class="project-card project-card--afgerond"
               data-onderwerpen={project.data.onderwerp.join('|')}
             >
+              {project.data.logo ? (
+                <div class="card-logo">
+                  <img src={`${base}${project.data.logo}`} alt={`${project.data.title} logo`} />
+                </div>
+              ) : (
+                <div class="card-logo card-logo-placeholder">
+                  <span>🎤</span>
+                </div>
+              )}
               <div class="card-body">
                 <h2 class="card-title">{project.data.title}</h2>
                 {project.data.instelling && (
