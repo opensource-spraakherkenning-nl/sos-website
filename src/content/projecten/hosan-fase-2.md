@@ -23,6 +23,7 @@ looptijd: "2025–2026"
 partners:
   - naam: "Universiteit Groningen"
     logo: "projecten/partners/rugr_logonl_rood_rgb.gif"
+    website: "https://www.rug.nl"
   - naam: "Nederlands Instituut voor Beeld & Geluid"
     logo: "projecten/partners/BG_logo.jpg"
     website: "https://www.beeldengeluid.nl"
