@@ -14,4 +14,11 @@ Een praktische toevoeging is de mogelijkheid om je gemeente of dorp in te stelle
 
 De makers erkennen de beperking eerlijk: bestaande systemen als Google Translate of ChatGPT herkennen Limburgse dialecten nauwelijks. Kalplat bouwt daar omheen door de sterktes van beschikbare spraakherkenning te combineren met gerichte nabewerking.
 
+Gebruikers kunnen kiezen uit vier spraakherkenningsmodellen:
+
+- **[ElevenLabs Scribe v1](https://elevenlabs.io/speech-to-text)** — De eerste generatie van ElevenLabs' transcriptiemodel. Solide basisnauwkeurigheid met ondersteuning voor sprekerherkenning.
+- **ElevenLabs Scribe v2** — De verbeterde versie, met ondersteuning voor meer dan 90 talen, woordniveau-tijdstempels, automatische sprekerherkenning en zogenaamde *audio tagging*: het model herkent niet alleen gesproken woorden maar labelt ook geluidsgebeurtenissen zoals gelach. Scribe v2 haalt de laagste woordfoutpercentages op gangbare benchmarks.
+- **OpenAI Whisper** — Het veelgebruikte open-source model van OpenAI. Whisper is breed inzetbaar, ondersteunt het Nederlands en is populair omdat het lokaal gedraaid kan worden zonder data naar externe servers te sturen.
+- **Mistral Voxtral** — Het spraakherkenningsmodel van het Franse AI-bedrijf Mistral, uitgebracht onder een open-source Apache 2.0-licentie. Voxtral ondersteunt dertien talen inclusief het Nederlands en biedt een lage verwerkingslatentie.
+
 Het initiatief past in een bredere beweging waarbij hobbyisten, onderzoekers en lokale partijen spraaktechnologie toegankelijk proberen te maken voor talen en varianten die buiten de boot vallen van grote techbedrijven — vergelijkbaar met [praoten.nl](https://praoten.nl) voor Nedersaksische dialecten.
