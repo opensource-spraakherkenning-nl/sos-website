@@ -16,7 +16,7 @@ De makers erkennen de beperking eerlijk: bestaande systemen als Google Translate
 
 Gebruikers kunnen kiezen uit vier spraakherkenningsmodellen:
 
-- **[ElevenLabs Scribe v1](https://elevenlabs.io/speech-to-text)** — De eerste generatie van ElevenLabs' transcriptiemodel. Solide basisnauwkeurigheid met ondersteuning voor sprekerherkenning.
+- **[ElevenLabs Scribe v1](https://elevenlabs.io/speech-to-text)** — ElevenLabs is een Amerikaans AI-bedrijf dat zich specialiseert in spraaktechnologie, bekend van realistische tekst-naar-spraaksystemen. Scribe is hun transcriptielijn: de eerste generatie biedt solide basisnauwkeurigheid met ondersteuning voor sprekerherkenning. Solide basisnauwkeurigheid met ondersteuning voor sprekerherkenning.
 - **ElevenLabs Scribe v2** — De verbeterde versie, met ondersteuning voor meer dan 90 talen, woordniveau-tijdstempels, automatische sprekerherkenning en zogenaamde *audio tagging*: het model herkent niet alleen gesproken woorden maar labelt ook geluidsgebeurtenissen zoals gelach. Scribe v2 haalt de laagste woordfoutpercentages op gangbare benchmarks.
 - **OpenAI Whisper** — Het veelgebruikte open-source model van OpenAI. Whisper is breed inzetbaar, ondersteunt het Nederlands en is populair omdat het lokaal gedraaid kan worden zonder data naar externe servers te sturen.
 - **Mistral Voxtral** — Het spraakherkenningsmodel van het Franse AI-bedrijf Mistral, uitgebracht onder een open-source Apache 2.0-licentie. Voxtral ondersteunt dertien talen inclusief het Nederlands en biedt een lage verwerkingslatentie.
