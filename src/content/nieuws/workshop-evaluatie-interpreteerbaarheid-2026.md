@@ -8,6 +8,8 @@ linkedin_tekst: "Op 8 mei organiseert Stichting Open Spraaktechnologie een works
 
 Op **8 mei 2026** organiseert Stichting Open Spraaktechnologie een workshop over evaluatie en interpreteerbaarheid van gesproken-taalsystemen. De bijeenkomst vindt plaats bij **Mindlabs** in Tilburg (zaal ML1.28, Locomotiefboulevard 101) en duurt van 10:30 tot 15:00 uur.
 
+Geïnteresseerden kunnen zich aanmelden via het [registratieformulier](https://docs.google.com/forms/d/e/1FAIpQLSd2aGFyUDbukycFkqwaj9qQan4sxR3j77R6HU6u5QfevB_oEQ/viewform?usp=dialog).
+
 ## Programma
 
 **8th May 2026, 10:30–15:00**
