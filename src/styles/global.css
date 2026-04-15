@@ -314,6 +314,7 @@ ul, ol {
 .article-body h3 { margin-top: 1.5rem; margin-bottom: 0.5rem; }
 .article-body p  { margin-bottom: 1rem; }
 .article-body ul, .article-body ol { margin-bottom: 1rem; }
+.article-body img { max-width: 100%; height: auto; border-radius: 4px; margin: 1.25rem 0; display: block; }
 
 /* ─── Buttons ────────────────────────────────────────── */
 
