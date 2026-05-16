@@ -1,6 +1,6 @@
 ---
 title: "Hersengestuurd hoortoestel filtert automatisch de stem waarop je let"
-date: 2026-04-20
+date: 2026-05-13
 description: "Onderzoekers van Columbia University demonstreren een hoortoestel dat via hersenactiviteit detecteert naar welke stem een gebruiker luistert — en die stem automatisch versterkt."
 auteur: "Redactie"
 linkedin_tekst: "Een hoortoestel dat 'weet' naar wie je luistert: Columbia University demonstreert real-time hersengestuurde spraakfiltering in rumoerige omgevingen. Grote stap voor de ruim 430 miljoen mensen met gehoorverlies. #spraaktechnologie #horen #toegankelijkheid"
