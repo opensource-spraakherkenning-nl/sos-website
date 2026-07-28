@@ -26,34 +26,35 @@ const nummers = (await getCollection('dixit'))
       {nummers.map((nummer) => {
         const beschrijving = nummer.data.titel ?? `DIXIT ${nummer.data.jaar}`;
         return (
-          <a
-            class="dixit-card"
-            href={`${base}dixit/${nummer.data.pdf}`}
-            target="_blank"
-            rel="noopener"
-          >
-            <img
-              src={`${base}dixit/covers/${nummer.data.cover}`}
-              alt={`Omslag DIXIT ${nummer.data.jaar} — ${beschrijving}`}
-              class="dixit-cover"
-              loading="lazy"
-            />
-            <div class="dixit-info">
-              <p class="post-meta">{nummer.data.jaar} &nbsp;·&nbsp; {nummer.data.periode}</p>
-              <p class="dixit-titel">{beschrijving}</p>
-              {nummer.data.extra && (
-                <a
-                  href={`${base}dixit/${nummer.data.extra.pdf}`}
-                  target="_blank"
-                  rel="noopener"
-                  class="dixit-extra"
-                  onclick="event.stopPropagation()"
-                >
-                  {nummer.data.extra.label}
-                </a>
-              )}
-            </div>
-          </a>
+          <div class="dixit-card">
+            <a
+              href={`${base}dixit/${nummer.data.pdf}`}
+              target="_blank"
+              rel="noopener"
+              class="dixit-card-link"
+            >
+              <img
+                src={`${base}dixit/covers/${nummer.data.cover}`}
+                alt={`Omslag DIXIT ${nummer.data.jaar} — ${beschrijving}`}
+                class="dixit-cover"
+                loading="lazy"
+              />
+              <div class="dixit-info">
+                <p class="post-meta">{nummer.data.jaar} &nbsp;·&nbsp; {nummer.data.periode}</p>
+                <p class="dixit-titel">{beschrijving}</p>
+              </div>
+            </a>
+            {nummer.data.extra && (
+              <a
+                href={`${base}dixit/${nummer.data.extra.pdf}`}
+                target="_blank"
+                rel="noopener"
+                class="dixit-extra"
+              >
+                {nummer.data.extra.label}
+              </a>
+            )}
+          </div>
         );
       })}
     </div>
@@ -69,7 +70,7 @@ const nummers = (await getCollection('dixit'))
     margin-top: 1.5rem;
   }
 
-  .dixit-card {
+  .dixit-card-link {
     display: block;
     color: inherit;
     text-decoration: none;
@@ -85,7 +86,7 @@ const nummers = (await getCollection('dixit'))
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
-  .dixit-card:hover .dixit-cover {
+  .dixit-card-link:hover .dixit-cover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
