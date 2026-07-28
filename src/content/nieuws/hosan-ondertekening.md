@@ -7,8 +7,6 @@ image: "nieuws/hosan-ondertekening.jpg"
 linkedin_tekst: "Meer dan 20 partners hebben HOSAN ondertekend: een initiatief voor hoogwaardige en soevereine spraakherkenning voor het Nederlands, inclusief dialecten en regionale accenten. Doel: minder afhankelijkheid van buitenlandse spraaktechnologie en spraakherkenning als betrouwbare publieke basisvoorziening. #spraaktechnologie #ASR #digitalesoevereiniteit"
 ---
 
-![Vertegenwoordigers van de HOSAN-partners op het podium tijdens de ondertekening](/nieuws/hosan-ondertekening.jpg)
-
 Meer dan twintig organisaties hebben hun handtekening gezet onder HOSAN, een initiatief voor **H**oogwaardige en **S**oevereine spraakherkenning voor **A**l het **N**ederlands. Het project moet spraaktechnologie opleveren die goed is toegesneden op het Nederlandse taalgebied, inclusief dialecten, regionale accenten en domeinspecifiek taalgebruik.
 
 ## Waarom HOSAN?
