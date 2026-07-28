@@ -140,7 +140,51 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"bestuur": {
+		"agenda": {
+"school-2026.md": {
+	id: "school-2026.md";
+  slug: "school-2026";
+  body: string;
+  collection: "agenda";
+  data: InferEntrySchema<"agenda">
+} & { render(): Render[".md"] };
+"school-2027.md": {
+	id: "school-2027.md";
+  slug: "school-2027";
+  body: string;
+  collection: "agenda";
+  data: InferEntrySchema<"agenda">
+} & { render(): Render[".md"] };
+"speech-tech-day-2026.md": {
+	id: "speech-tech-day-2026.md";
+  slug: "speech-tech-day-2026";
+  body: string;
+  collection: "agenda";
+  data: InferEntrySchema<"agenda">
+} & { render(): Render[".md"] };
+"speech-tech-day-2027.md": {
+	id: "speech-tech-day-2027.md";
+  slug: "speech-tech-day-2027";
+  body: string;
+  collection: "agenda";
+  data: InferEntrySchema<"agenda">
+} & { render(): Render[".md"] };
+"workshop-2026.md": {
+	id: "workshop-2026.md";
+  slug: "workshop-2026";
+  body: string;
+  collection: "agenda";
+  data: InferEntrySchema<"agenda">
+} & { render(): Render[".md"] };
+"workshop-2027.md": {
+	id: "workshop-2027.md";
+  slug: "workshop-2027";
+  body: string;
+  collection: "agenda";
+  data: InferEntrySchema<"agenda">
+} & { render(): Render[".md"] };
+};
+"bestuur": {
 "golshid-shekoufandeh.md": {
 	id: "golshid-shekoufandeh.md";
   slug: "golshid-shekoufandeh";
@@ -191,6 +235,211 @@ declare module 'astro:content' {
   data: InferEntrySchema<"bestuur">
 } & { render(): Render[".md"] };
 };
+"dixit": {
+"dixit-2003-1.md": {
+	id: "dixit-2003-1.md";
+  slug: "dixit-2003-1";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2004-1.md": {
+	id: "dixit-2004-1.md";
+  slug: "dixit-2004-1";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2004-2.md": {
+	id: "dixit-2004-2.md";
+  slug: "dixit-2004-2";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2004-3.md": {
+	id: "dixit-2004-3.md";
+  slug: "dixit-2004-3";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2004-4.md": {
+	id: "dixit-2004-4.md";
+  slug: "dixit-2004-4";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2005-1.md": {
+	id: "dixit-2005-1.md";
+  slug: "dixit-2005-1";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2005-2.md": {
+	id: "dixit-2005-2.md";
+  slug: "dixit-2005-2";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2005-3.md": {
+	id: "dixit-2005-3.md";
+  slug: "dixit-2005-3";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2005-4.md": {
+	id: "dixit-2005-4.md";
+  slug: "dixit-2005-4";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2006-1.md": {
+	id: "dixit-2006-1.md";
+  slug: "dixit-2006-1";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2006-2.md": {
+	id: "dixit-2006-2.md";
+  slug: "dixit-2006-2";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2008-1.md": {
+	id: "dixit-2008-1.md";
+  slug: "dixit-2008-1";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2008-2.md": {
+	id: "dixit-2008-2.md";
+  slug: "dixit-2008-2";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2009.md": {
+	id: "dixit-2009.md";
+  slug: "dixit-2009";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2010.md": {
+	id: "dixit-2010.md";
+  slug: "dixit-2010";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2011.md": {
+	id: "dixit-2011.md";
+  slug: "dixit-2011";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2012.md": {
+	id: "dixit-2012.md";
+  slug: "dixit-2012";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2013.md": {
+	id: "dixit-2013.md";
+  slug: "dixit-2013";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2014.md": {
+	id: "dixit-2014.md";
+  slug: "dixit-2014";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2015.md": {
+	id: "dixit-2015.md";
+  slug: "dixit-2015";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2016.md": {
+	id: "dixit-2016.md";
+  slug: "dixit-2016";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2017.md": {
+	id: "dixit-2017.md";
+  slug: "dixit-2017";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2018.md": {
+	id: "dixit-2018.md";
+  slug: "dixit-2018";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2019.md": {
+	id: "dixit-2019.md";
+  slug: "dixit-2019";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2020.md": {
+	id: "dixit-2020.md";
+  slug: "dixit-2020";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2021.md": {
+	id: "dixit-2021.md";
+  slug: "dixit-2021";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2022.md": {
+	id: "dixit-2022.md";
+  slug: "dixit-2022";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2023.md": {
+	id: "dixit-2023.md";
+  slug: "dixit-2023";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+"dixit-2024.md": {
+	id: "dixit-2024.md";
+  slug: "dixit-2024";
+  body: string;
+  collection: "dixit";
+  data: InferEntrySchema<"dixit">
+} & { render(): Render[".md"] };
+};
 "edities": {
 "speechtechdag-2023.md": {
 	id: "speechtechdag-2023.md";
@@ -220,8 +469,22 @@ declare module 'astro:content' {
   collection: "edities";
   data: InferEntrySchema<"edities">
 } & { render(): Render[".md"] };
+"speechtechdag-2027.md": {
+	id: "speechtechdag-2027.md";
+  slug: "speechtechdag-2027";
+  body: string;
+  collection: "edities";
+  data: InferEntrySchema<"edities">
+} & { render(): Render[".md"] };
 };
 "nieuws": {
+"45-jaar-teletekst-ondertiteling.md": {
+	id: "45-jaar-teletekst-ondertiteling.md";
+  slug: "45-jaar-teletekst-ondertiteling";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
 "STD2026.md": {
 	id: "STD2026.md";
   slug: "std2026";
@@ -229,9 +492,149 @@ declare module 'astro:content' {
   collection: "nieuws";
   data: InferEntrySchema<"nieuws">
 } & { render(): Render[".md"] };
-"testbericht.md": {
-	id: "testbericht.md";
-  slug: "testbericht";
+"ai-depressie-spraak.md": {
+	id: "ai-depressie-spraak.md";
+  slug: "ai-depressie-spraak";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"ai-stemmen-beter-verstaanbaar.md": {
+	id: "ai-stemmen-beter-verstaanbaar.md";
+  slug: "ai-stemmen-beter-verstaanbaar";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"ai-tolken-gebarentaal.md": {
+	id: "ai-tolken-gebarentaal.md";
+  slug: "ai-tolken-gebarentaal";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"eu-ai-act-voice-ai.md": {
+	id: "eu-ai-act-voice-ai.md";
+  slug: "eu-ai-act-voice-ai";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"gemini-flash-tts-nederlands.md": {
+	id: "gemini-flash-tts-nederlands.md";
+  slug: "gemini-flash-tts-nederlands";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"hersengestuurd-hoortoestel.md": {
+	id: "hersengestuurd-hoortoestel.md";
+  slug: "hersengestuurd-hoortoestel";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"hosan-ondertekening.md": {
+	id: "hosan-ondertekening.md";
+  slug: "hosan-ondertekening";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"kabinetsplannen-ngt.md": {
+	id: "kabinetsplannen-ngt.md";
+  slug: "kabinetsplannen-ngt";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"kaldi-nl-gehoortest.md": {
+	id: "kaldi-nl-gehoortest.md";
+  slug: "kaldi-nl-gehoortest";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"kalplat-limburgs-notulist.md": {
+	id: "kalplat-limburgs-notulist.md";
+  slug: "kalplat-limburgs-notulist";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"microsoft-mai-transcribe-1.md": {
+	id: "microsoft-mai-transcribe-1.md";
+  slug: "microsoft-mai-transcribe-1";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"msc-speech-technology-spring-school.md": {
+	id: "msc-speech-technology-spring-school.md";
+  slug: "msc-speech-technology-spring-school";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"murmel-nederlandstalig-spraakmodel.md": {
+	id: "murmel-nederlandstalig-spraakmodel.md";
+  slug: "murmel-nederlandstalig-spraakmodel";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"odette-scharenborg-nwo-profiel.md": {
+	id: "odette-scharenborg-nwo-profiel.md";
+  slug: "odette-scharenborg-nwo-profiel";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"praoten-nl-nedersaksisch.md": {
+	id: "praoten-nl-nedersaksisch.md";
+  slug: "praoten-nl-nedersaksisch";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"rug-gronings-spraaktechnologie.md": {
+	id: "rug-gronings-spraaktechnologie.md";
+  slug: "rug-gronings-spraaktechnologie";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"spraakherkenning-2026-overzicht.md": {
+	id: "spraakherkenning-2026-overzicht.md";
+  slug: "spraakherkenning-2026-overzicht";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"spraakherkenning-dysartrie.md": {
+	id: "spraakherkenning-dysartrie.md";
+  slug: "spraakherkenning-dysartrie";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"stotteren-spraaktech-eindgebruikers.md": {
+	id: "stotteren-spraaktech-eindgebruikers.md";
+  slug: "stotteren-spraaktech-eindgebruikers";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"tss-acquireert-spraaklab.md": {
+	id: "tss-acquireert-spraaklab.md";
+  slug: "tss-acquireert-spraaklab";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"voxtral-transcribe-2.md": {
+	id: "voxtral-transcribe-2.md";
+  slug: "voxtral-transcribe-2";
   body: string;
   collection: "nieuws";
   data: InferEntrySchema<"nieuws">
@@ -243,18 +646,32 @@ declare module 'astro:content' {
   collection: "nieuws";
   data: InferEntrySchema<"nieuws">
 } & { render(): Render[".md"] };
+"workshop-evaluatie-interpreteerbaarheid-2026.md": {
+	id: "workshop-evaluatie-interpreteerbaarheid-2026.md";
+  slug: "workshop-evaluatie-interpreteerbaarheid-2026";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
+"zuyderland-ai-avatar-spraakherkenning.md": {
+	id: "zuyderland-ai-avatar-spraakherkenning.md";
+  slug: "zuyderland-ai-avatar-spraakherkenning";
+  body: string;
+  collection: "nieuws";
+  data: InferEntrySchema<"nieuws">
+} & { render(): Render[".md"] };
 };
 "projecten": {
-"asr-nl-benchmark.md": {
-	id: "asr-nl-benchmark.md";
-  slug: "asr-nl-benchmark";
+"hosan-fase-1.md": {
+	id: "hosan-fase-1.md";
+  slug: "hosan-fase-1";
   body: string;
   collection: "projecten";
   data: InferEntrySchema<"projecten">
 } & { render(): Render[".md"] };
-"kaldi-nl.md": {
-	id: "kaldi-nl.md";
-  slug: "kaldi-nl";
+"hosan-fase-2.md": {
+	id: "hosan-fase-2.md";
+  slug: "hosan-fase-2";
   body: string;
   collection: "projecten";
   data: InferEntrySchema<"projecten">

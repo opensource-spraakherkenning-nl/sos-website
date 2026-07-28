@@ -88,4 +88,20 @@ const agenda = defineCollection({
   }),
 });
 
-export const collections = { nieuws, projecten, edities, bestuur, agenda };
+const dixit = defineCollection({
+  type: 'content',
+  schema: z.object({
+    titel: z.string().optional(),  // Themanaam van de editie, bijv. "TST & Conversational AI"
+    jaar: z.number(),
+    periode: z.string(),           // Bijv. "december 2024" of "nummer 3"
+    volgorde: z.number(),          // Oplopend nummer voor chronologische sortering
+    pdf: z.string(),               // Bestandsnaam in public/dixit/
+    cover: z.string(),             // Bestandsnaam in public/dixit/covers/
+    extra: z.object({
+      label: z.string(),
+      pdf: z.string(),
+    }).optional(),
+  }),
+});
+
+export const collections = { nieuws, projecten, edities, bestuur, agenda, dixit };

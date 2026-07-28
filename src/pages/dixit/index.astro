@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { base } from '../../lib/base';
+
+const nummers = (await getCollection('dixit'))
+  .sort((a, b) => b.data.volgorde - a.data.volgorde);
+---
+
+<BaseLayout
+  title="DIXIT"
+  description="Alle DIXIT-tijdschriften over Nederlandse spraak- en taaltechnologie, oorspronkelijk uitgegeven door Stichting NOTAS."
+>
+  <div class="container">
+
+    <div class="page-header">
+      <h1>DIXIT</h1>
+      <p>
+        DIXIT is het tijdschrift over Nederlandse spraak- en taaltechnologie, van 2003 tot en met 2024
+        uitgegeven door Stichting NOTAS. Nu NOTAS is opgegaan in Stichting Open Spraaktechnologie,
+        zijn alle edities hier ondergebracht.
+      </p>
+    </div>
+
+    <div class="dixit-grid">
+      {nummers.map((nummer) => {
+        const beschrijving = nummer.data.titel ?? `DIXIT ${nummer.data.jaar}`;
+        return (
+          <a
+            class="dixit-card"
+            href={`${base}dixit/${nummer.data.pdf}`}
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src={`${base}dixit/covers/${nummer.data.cover}`}
+              alt={`Omslag DIXIT ${nummer.data.jaar} — ${beschrijving}`}
+              class="dixit-cover"
+              loading="lazy"
+            />
+            <div class="dixit-info">
+              <p class="post-meta">{nummer.data.jaar} &nbsp;·&nbsp; {nummer.data.periode}</p>
+              <p class="dixit-titel">{beschrijving}</p>
+              {nummer.data.extra && (
+                <a
+                  href={`${base}dixit/${nummer.data.extra.pdf}`}
+                  target="_blank"
+                  rel="noopener"
+                  class="dixit-extra"
+                  onclick="event.stopPropagation()"
+                >
+                  {nummer.data.extra.label}
+                </a>
+              )}
+            </div>
+          </a>
+        );
+      })}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .dixit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.5rem 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .dixit-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .dixit-cover {
+    width: 100%;
+    aspect-ratio: 3 / 4.2;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-alt);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .dixit-card:hover .dixit-cover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .dixit-info {
+    margin-top: 0.5rem;
+  }
+
+  .dixit-info .post-meta {
+    font-size: 0.75rem;
+    margin: 0;
+  }
+
+  .dixit-titel {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0.15rem 0 0;
+    line-height: 1.3;
+  }
+
+  .dixit-extra {
+    display: inline-block;
+    margin-top: 0.35rem;
+    font-size: 0.75rem;
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 640px) {
+    .dixit-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 1.25rem 1rem;
+    }
+  }
+</style>
